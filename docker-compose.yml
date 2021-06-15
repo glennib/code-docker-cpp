@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  cppdev:
+    hostname: cppdev
+    container_name: cppdev
+    build: .
+    image: cppdev
+    volumes:
+      - ./dev:/home/user/dev
+      - ./config/ssh:/home/user/.ssh
+      - ./config/vscode-server:/home/user/.vscode-server
+    ports:
+      - "2222:22"
+    cap_add:
+      - "sys_ptrace"
