@@ -7,16 +7,11 @@ Starting the container:
 docker-compose up -d --build
 ```
 
-After first start of container you should change ownership of the contents in the `config` directory from the host computer:
-```bash
-sudo chown -R $USER config
-```
-
 I've created a ssh target in `~/.ssh/config` on my host computer:
 ```
 Host cppdev
     HostName <localhost or the IP of the machine that runs Docker>
-    User user
+    User root
     Port 2222
 ```
 Also, I've set up my ssh key on that target from host:

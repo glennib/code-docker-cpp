@@ -21,9 +21,8 @@ RUN ( \
   ) > /etc/ssh/sshd_config_cppdev \
   && mkdir /run/sshd
 
-RUN useradd -m user \
-  && yes password | passwd user
+RUN yes password | passwd root
 
-RUN usermod -s /bin/bash user
+RUN usermod -s /bin/bash root
 
 CMD ["/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/sshd_config_cppdev"]

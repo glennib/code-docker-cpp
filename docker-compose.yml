@@ -7,9 +7,9 @@ services:
     build: .
     image: cppdev
     volumes:
-      - ./dev:/home/user/dev
-      - ./config/ssh:/home/user/.ssh
-      - ./config/vscode-server:/home/user/.vscode-server
+      - ./dev:/root/dev
+      - ./config/ssh:/root/.ssh
+      - ./config/vscode-server:/root/.vscode-server
     ports:
       - "2222:22"
     cap_add:
