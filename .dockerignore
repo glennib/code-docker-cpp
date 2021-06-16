@@ -5,3 +5,4 @@ dev/
 docker-compose.yml
 Dockerfile
 README.md
+**/.git/
